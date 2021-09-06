@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>Sitecon.Feature.Events</RootNamespace>
+    <AssemblyName>Sitecon.Feature.Events</AssemblyName>
+    <PublishTargetType>website</PublishTargetType>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\_Build\props\_PublishTargetType.props" />
+  <ItemGroup>
+    <None Remove="Views\Events\EventSchedule.cshtml" />
+    <None Remove="Views\Events\FeaturedSpeakerMainRepeaterPattern.cshtml" />
+    <None Remove="Views\Events\FeaturedSpeakerRepeaterPattern.cshtml" />
+    <None Remove="Views\Events\FeaturedSpeakers.cshtml" />
+    <None Remove="Views\Events\FeaturedSpeakersRepeaterPattern.cshtml" />
+    <None Remove="Views\Events\FeaturedSpeakersSidebar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\SitecoreHelperExtensions\code\Sitecon.Foundation.SitecoreHelperExtensions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Views\Events\EventSchedule.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\Events\FeaturedSpeakerRepeaterPattern.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\Events\FeaturedSpeakerMainRepeaterPattern.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\Events\FeaturedSpeakersRepeaterPattern.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\Events\FeaturedSpeakersSidebar.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\Events\FeaturedSpeakers.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

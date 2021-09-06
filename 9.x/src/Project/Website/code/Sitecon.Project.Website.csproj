@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>Sitecon.Project.Website</RootNamespace>
+    <AssemblyName>Sitecon.Project.Website</AssemblyName>
+    <PublishTargetType>website</PublishTargetType>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="App_Config\Include\Project\Sitecon.Project.Website\SiteDefinition.config" />
+    <None Remove="Views\Website\Layouts\Default.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\lib\flexslider\2.6.1\" />
+    <Folder Include="assets\lib\flexslider\2.6.2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="App_Config\Include\Project\Sitecon.Project.Website\SiteDefinition.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\Website\Layouts\Default.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\_Build\props\_PublishTargetType.props" />
+</Project>

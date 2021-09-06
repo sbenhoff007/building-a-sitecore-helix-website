@@ -1,0 +1,11 @@
+<Project>
+    <Import Project="_NetFramework.References.props" />
+    <PropertyGroup>
+        <SitecoreVersion>10.0.0</SitecoreVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Sitecore.Kernel" Version="$(SitecoreVersion)" />
+        <PackageReference Include="Sitecore.Mvc" Version="$(SitecoreVersion)" />
+        <PackageReference Include="Sitecore.Mvc.Analytics" Version="$(SitecoreVersion)" />
+    </ItemGroup>
+</Project>

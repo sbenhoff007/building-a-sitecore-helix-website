@@ -1,0 +1,153 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{AB619889-68B0-454D-8487-B70A1825642E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{1970D20D-2C5F-4B4C-8626-0496C5EF6528}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{897EEF29-F7CF-4E88-8E58-95352D1F0901}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution", "_Solution", "{B54258E0-A330-40D6-84F7-7AEA94D8E701}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Build", "_Build", "{C4E83C40-C656-4AC2-848B-72345B971A1F}"
+	ProjectSection(SolutionItems) = preProject
+		Default.Properties.props.user = Default.Properties.props.user
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		_build\Solution.config = _build\Solution.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "props", "props", "{B677E96B-C6A5-42CD-AA06-1D427F43B22E}"
+	ProjectSection(SolutionItems) = preProject
+		_build\props\_NetFramework.PublishProfile.props = _build\props\_NetFramework.PublishProfile.props
+		_build\props\_NetFramework.References.props = _build\props\_NetFramework.References.props
+		_build\props\_PublishTargetType.props = _build\props\_PublishTargetType.props
+		_build\props\_SitecoreHost.Client.props = _build\props\_SitecoreHost.Client.props
+		_build\props\_TestProject.props = _build\props\_TestProject.props
+		_build\props\Default.Compiler.props = _build\props\Default.Compiler.props
+		_build\props\Default.ProjectContent.props = _build\props\Default.ProjectContent.props
+		_build\props\Default.Properties.props = _build\props\Default.Properties.props
+		_build\props\Default.Publishing.props = _build\props\Default.Publishing.props
+		_build\props\Identity.Publishing.props = _build\props\Identity.Publishing.props
+		_build\props\Identity.References.props = _build\props\Identity.References.props
+		_build\props\Website.DoNotPublishAssemblies.props = _build\props\Website.DoNotPublishAssemblies.props
+		_build\props\Website.Publishing.props = _build\props\Website.Publishing.props
+		_build\props\Website.References.props = _build\props\Website.References.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "targets", "targets", "{9B7B8141-B7B6-4C02-B7D4-50F59BE4F894}"
+	ProjectSection(SolutionItems) = preProject
+		_build\targets\AutoPublish.targets = _build\targets\AutoPublish.targets
+		_build\targets\InvokeWebPublish.targets = _build\targets\InvokeWebPublish.targets
+		_build\targets\PublishSingleItem.targets = _build\targets\PublishSingleItem.targets
+		_build\targets\RemoveNotPublishedAssemblies.targets = _build\targets\RemoveNotPublishedAssemblies.targets
+		_build\targets\TouchConfig.targets = _build\targets\TouchConfig.targets
+		_build\targets\TransformXml.targets = _build\targets\TransformXml.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{21C5DC6A-3FBE-43D3-B564-8F2C19464ADC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sitecon.Project.Website", "src\Project\Website\code\Sitecon.Project.Website.csproj", "{10740F40-1E23-4C44-8053-6A3864EC6611}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageContent", "PageContent", "{97738FE5-8ECC-4DBA-AA31-DF5CB008B71E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sitecon.Feature.PageContent", "src\Feature\PageContent\code\Sitecon.Feature.PageContent.csproj", "{C74F075A-5FD2-422E-8CDB-4D0E64633B73}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A9B69457-7D00-4A1A-B315-CB5A567FE202} = {A9B69457-7D00-4A1A-B315-CB5A567FE202}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreHelperExtensions", "SitecoreHelperExtensions", "{A1F98072-BF8A-4FFD-96B4-FC4214C655BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sitecon.Foundation.SitecoreHelperExtensions", "src\Foundation\SitecoreHelperExtensions\code\Sitecon.Foundation.SitecoreHelperExtensions.csproj", "{A9B69457-7D00-4A1A-B315-CB5A567FE202}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Homepage", "Homepage", "{232EB41A-0BDE-48AB-B032-F13C3E814AA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sitecon.Feature.Homepage", "src\Feature\Homepage\code\Sitecon.Feature.Homepage.csproj", "{8855B2B5-223C-4E04-B180-303BBF06665C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A9B69457-7D00-4A1A-B315-CB5A567FE202} = {A9B69457-7D00-4A1A-B315-CB5A567FE202}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Navigation", "Navigation", "{6AD5FF6E-9826-46B6-AFD2-3F462CFD95AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sitecon.Feature.Navigation", "src\Feature\Navigation\code\Sitecon.Feature.Navigation.csproj", "{36B8A743-C820-408A-807A-115899A155D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Events", "Events", "{4D0EB5D4-EA21-4E85-B702-8D7A52652D51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sitecon.Feature.Events", "src\Feature\Events\code\Sitecon.Feature.Events.csproj", "{290F8468-23D4-429B-A73F-D175349C318F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A9B69457-7D00-4A1A-B315-CB5A567FE202} = {A9B69457-7D00-4A1A-B315-CB5A567FE202}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BranchPresets", "BranchPresets", "{258AF1A1-5EED-4451-903F-F88E2E1047EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sitecon.Foundation.BranchPresets", "src\Foundation\BranchPresets\code\Sitecon.Foundation.BranchPresets.csproj", "{1C80DE0D-CA6D-402A-B875-15201CEC708A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10740F40-1E23-4C44-8053-6A3864EC6611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10740F40-1E23-4C44-8053-6A3864EC6611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10740F40-1E23-4C44-8053-6A3864EC6611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10740F40-1E23-4C44-8053-6A3864EC6611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74F075A-5FD2-422E-8CDB-4D0E64633B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74F075A-5FD2-422E-8CDB-4D0E64633B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74F075A-5FD2-422E-8CDB-4D0E64633B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74F075A-5FD2-422E-8CDB-4D0E64633B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9B69457-7D00-4A1A-B315-CB5A567FE202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9B69457-7D00-4A1A-B315-CB5A567FE202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9B69457-7D00-4A1A-B315-CB5A567FE202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9B69457-7D00-4A1A-B315-CB5A567FE202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8855B2B5-223C-4E04-B180-303BBF06665C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8855B2B5-223C-4E04-B180-303BBF06665C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8855B2B5-223C-4E04-B180-303BBF06665C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8855B2B5-223C-4E04-B180-303BBF06665C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B8A743-C820-408A-807A-115899A155D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B8A743-C820-408A-807A-115899A155D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B8A743-C820-408A-807A-115899A155D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B8A743-C820-408A-807A-115899A155D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{290F8468-23D4-429B-A73F-D175349C318F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{290F8468-23D4-429B-A73F-D175349C318F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{290F8468-23D4-429B-A73F-D175349C318F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{290F8468-23D4-429B-A73F-D175349C318F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C80DE0D-CA6D-402A-B875-15201CEC708A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C80DE0D-CA6D-402A-B875-15201CEC708A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C80DE0D-CA6D-402A-B875-15201CEC708A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C80DE0D-CA6D-402A-B875-15201CEC708A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B677E96B-C6A5-42CD-AA06-1D427F43B22E} = {C4E83C40-C656-4AC2-848B-72345B971A1F}
+		{9B7B8141-B7B6-4C02-B7D4-50F59BE4F894} = {C4E83C40-C656-4AC2-848B-72345B971A1F}
+		{21C5DC6A-3FBE-43D3-B564-8F2C19464ADC} = {897EEF29-F7CF-4E88-8E58-95352D1F0901}
+		{10740F40-1E23-4C44-8053-6A3864EC6611} = {21C5DC6A-3FBE-43D3-B564-8F2C19464ADC}
+		{97738FE5-8ECC-4DBA-AA31-DF5CB008B71E} = {AB619889-68B0-454D-8487-B70A1825642E}
+		{C74F075A-5FD2-422E-8CDB-4D0E64633B73} = {97738FE5-8ECC-4DBA-AA31-DF5CB008B71E}
+		{A1F98072-BF8A-4FFD-96B4-FC4214C655BC} = {1970D20D-2C5F-4B4C-8626-0496C5EF6528}
+		{A9B69457-7D00-4A1A-B315-CB5A567FE202} = {A1F98072-BF8A-4FFD-96B4-FC4214C655BC}
+		{232EB41A-0BDE-48AB-B032-F13C3E814AA2} = {AB619889-68B0-454D-8487-B70A1825642E}
+		{8855B2B5-223C-4E04-B180-303BBF06665C} = {232EB41A-0BDE-48AB-B032-F13C3E814AA2}
+		{6AD5FF6E-9826-46B6-AFD2-3F462CFD95AF} = {AB619889-68B0-454D-8487-B70A1825642E}
+		{36B8A743-C820-408A-807A-115899A155D5} = {6AD5FF6E-9826-46B6-AFD2-3F462CFD95AF}
+		{4D0EB5D4-EA21-4E85-B702-8D7A52652D51} = {AB619889-68B0-454D-8487-B70A1825642E}
+		{290F8468-23D4-429B-A73F-D175349C318F} = {4D0EB5D4-EA21-4E85-B702-8D7A52652D51}
+		{258AF1A1-5EED-4451-903F-F88E2E1047EC} = {1970D20D-2C5F-4B4C-8626-0496C5EF6528}
+		{1C80DE0D-CA6D-402A-B875-15201CEC708A} = {258AF1A1-5EED-4451-903F-F88E2E1047EC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6FF8FB28-B06B-473A-B81E-89D2E84EBCED}
+	EndGlobalSection
+EndGlobal

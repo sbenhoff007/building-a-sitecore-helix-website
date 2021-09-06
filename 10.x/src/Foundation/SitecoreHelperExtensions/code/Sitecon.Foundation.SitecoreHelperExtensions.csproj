@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>Sitecon.Foundation.SitecoreHelperExtensions</RootNamespace>
+    <AssemblyName>Sitecon.Foundation.SitecoreHelperExtensions</AssemblyName>
+    <SitecoreRoleType>website</SitecoreRoleType>
+  </PropertyGroup>
+</Project>

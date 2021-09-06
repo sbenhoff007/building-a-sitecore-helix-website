@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>Sitecon.Foundation.Configuration</RootNamespace>
+    <AssemblyName>Sitecon.Foundation.Configuration</AssemblyName>
+    <PublishTargetType>website</PublishTargetType>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\_Build\props\_PublishTargetType.props" />
+  <ItemGroup>
+    <Content Update="App_Config\Include\Foundation\Sitecon.Foundation.Configuration\SiteDefinition.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

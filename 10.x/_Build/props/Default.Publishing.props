@@ -1,0 +1,96 @@
+<!--
+***********************************************************************************************
+Publish.Properties.props
+
+
+          ## TODO UPDATE COMMENTS IN THIS FILE - DO NOT TRUST THEM TO BE CORRECT :) !.. ##
+
+  Properties related to publishing projects and solution.
+
+  Properties such as folder paths can be overridden locally by adding a file named Publish.Properties.props.user
+  F. ex. to control the PublishTargetDirectory location on your dev machine if it differ from the 
+
+  *** [IMPORTANT] ***
+  
+  
+                                                                      [Anders Laub // Laub+Co]
+***********************************************************************************************
+-->
+
+<Project>
+
+  <PropertyGroup>
+    <!-- Publish target root directories. 
+         
+         These properties are not used directly in .targets 
+         
+         They exist only for convenience to easily set the PublishTargetDirectory 
+         to a specific instance role in .csproj files
+         -->
+
+    <!-- DEFAULT PROPERTIES SECTION 
+            The below properties should be explicitly overridden in $(SitecoreRoleType).Common.props}-->
+    <PublishRootPath>C:\inetpub\wwwroot\$safeprojectname$\</PublishRootPath>
+    <PublishPathWebsite>$(PublishRootPath)</PublishPathWebsite>
+    <PublishPathXConnect>$(PublishRootPath)\xconnect\</PublishPathXConnect>
+    <PublishPathXCProcessing>$(PublishRootPath)\xconnect-processingengine</PublishPathXCProcessing>
+    <PublishPathXCIndexWorker>$(PublishRootPath)\xconnect-indexworker</PublishPathXCIndexWorker>
+    <PublishPathXCAutomationEngine>$(PublishRootPath)\xconnect-automationengine</PublishPathXCAutomationEngine>
+    <PublishPathIdentity>$(PublishRootPath)\identity</PublishPathIdentity>
+    
+    <SpecialReleaseBuildFolders>False</SpecialReleaseBuildFolders>
+
+    <!-- PublishTargetDirectory 
+            The default target directory for publishing. Defaults to the website root directory.
+            
+              Note: Override this property in .csproj by setting msbuild property SitecoreRoleType 
+              -->
+    <PublishTargetDirectory>$(PublishPathWebsite)</PublishTargetDirectory>
+
+    <!-- IsStandaloneBuild
+          Set this to true for local dev builds targeting a standalone instance (xm0/xp0). 
+          Use msbuild property parameter to override on scaled builds.
+          Note: not relevant if property is not explicitly used in .csproj files - see above example -->
+    <IsStandaloneBuild>$isstandalone$</IsStandaloneBuild>
+
+    <!-- AutoPublishOnBuild
+          Toogles automatic-publishing on builds, including from VS 
+          see ./build/targets/Website.AutoPublish.targets for details -->
+    <AutoPublishOnBuild>True</AutoPublishOnBuild>
+
+    <!-- RunXmlTransformsOnPublish
+          Toggles transforming xml files post publishing, 
+          see ./build/targets/Website.TransformXml.targets for details -->
+    <RunXmlTransforms>True</RunXmlTransforms>
+
+    <!-- XmlTransformFilePostfix
+          File postfix for transformation files (default: xdt)
+          Name files [whatever].[{Configuration}|Any].xdt 
+          Ex. web.config.debug.xdt or web.config.any.xdt -->
+    <XmlTransformFilePostfix>xdt</XmlTransformFilePostfix>
+
+    <!-- LegacyRemoveNotPublishedAssemblies
+          Prevent packagereference assemblies to be copied when privateassets=all|runtime
+          even though the package structure does not follow the current conventions.  
+          see ./build/targets/RemovePrivatePackageReference.targets for details -->
+    <LegacyRemoveNotPublishedAssemblies>true</LegacyRemoveNotPublishedAssemblies>
+
+    <!-- UseFileSystemPublishProfile
+          Dynamically include classic publish profile properties. 
+          Use only for classic .net framework modules
+          Default: true  -->
+    <UseFileSystemPublishProfile>true</UseFileSystemPublishProfile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(SpecialReleaseBuildFolders)' == 'true' And '$(Configuration)' == 'Release'">
+    <ReleaseBuildFolder>$releasebuildfolderroot$</ReleaseBuildFolder>
+    <PublishRootPath>$(ReleaseBuildFolder)</PublishRootPath>
+    <PublishPathWebsite>$(ReleaseBuildFolder)\Website</PublishPathWebsite>
+    <PublishPathXConnect>$(ReleaseBuildFolder)\xconnect\</PublishPathXConnect>
+    <PublishPathXCProcessing>$(ReleaseBuildFolder)\xconnect-processingengine</PublishPathXCProcessing>
+    <PublishPathXCIndexWorker>$(ReleaseBuildFolder)\xconnect-indexworker</PublishPathXCIndexWorker>
+    <PublishPathXCAutomationEngine>$(ReleaseBuildFolder)\xconnect-automationengine</PublishPathXCAutomationEngine>
+    <PublishPathIdentity>$(ReleaseBuildFolder)\identity</PublishPathIdentity>
+  </PropertyGroup>
+  
+</Project>

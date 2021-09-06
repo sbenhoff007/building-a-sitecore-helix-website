@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>Sitecon.Feature.PageContent</RootNamespace>
+    <AssemblyName>Sitecon.Feature.PageContent</AssemblyName>
+    <PublishTargetType>website</PublishTargetType>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Views\PageContent\BodyCopy.cshtml" />
+    <None Remove="Views\PageContent\Hero.cshtml" />
+    <None Remove="Views\PageContent\ListWithIcons.cshtml" />
+    <None Remove="Views\PageContent\Shared\_EventDetail.cshtml" />
+    <None Remove="Views\PageContent\TitleAndText.cshtml" />
+    <None Remove="Views\PageContent\TwoImage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\SitecoreHelperExtensions\code\Sitecon.Foundation.SitecoreHelperExtensions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Views\PageContent\Hero.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\PageContent\ListWithIcons.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\PageContent\BodyCopy.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\PageContent\Shared\_EventDetail.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\PageContent\TitleAndText.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\PageContent\TwoImage.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\_Build\props\_PublishTargetType.props" />
+</Project>

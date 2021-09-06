@@ -1,0 +1,20 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecon.Feature.PageContent
+@using Sitecon.Feature.PageContent.Models
+@using Sitecon.Foundation.SitecoreHelperExtensions
+@model ListWithIconsItems
+
+@if (Model.ListItems != null && Model.ListItems.Count() > 0)
+{
+  <ul class="fa-ul">
+    @foreach (var li in Model.ListItems)
+    {
+      <li><span class="fa-li"><i class="fas fa-@Model.ListIcon"></i></span>@li</li>
+    }
+  </ul>
+}
+else if (Sitecore.Context.PageMode.IsExperienceEditor && Model.ListItems.Count() == 0)
+{
+  <span>Please enter the List Text by clicking the edit button in the component toolbar.</span>
+}

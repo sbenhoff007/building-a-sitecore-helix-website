@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>Sitecon.Feature.Navigation</RootNamespace>
+    <AssemblyName>Sitecon.Feature.Navigation</AssemblyName>
+    <PublishTargetType>website</PublishTargetType>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\_Build\props\_PublishTargetType.props" />
+  <ItemGroup>
+    <None Remove="Views\Navigation\Footer.cshtml" />
+    <None Remove="Views\Navigation\Header.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Views\Navigation\Footer.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\Navigation\Header.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
